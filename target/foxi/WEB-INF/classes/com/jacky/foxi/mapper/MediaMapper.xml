@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jacky.foxi.dao.MediaDao">
+    <insert id="createMedia" parameterType="Media" useGeneratedKeys="true" keyProperty="media_id">
+		INSERT INTO fx_media
+		(media_src,media_status,create_time,delete_time)
+		VALUES
+		(#{media_src},#{media_status},#{create_time},#{delete_time})
+	</insert>
+</mapper>
